@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { Image } from '../../../models/image';
 
 @Component({
@@ -17,10 +17,9 @@ import { Image } from '../../../models/image';
 ]
 })
 export class ImageComponent implements OnInit {
-  @Input() image:Image;
+  @Input() image: any;
   constructor() { }
 
   ngOnInit() {
   }
-
 }
