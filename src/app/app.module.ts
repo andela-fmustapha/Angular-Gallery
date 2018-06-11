@@ -8,6 +8,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ImageListComponent } from './gallery/image-list/image-list.component';
 import { ImageComponent } from './gallery/image-list/image/image.component';
 
+import { ImageService } from './services/image.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { ImageComponent } from './gallery/image-list/image/image.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
