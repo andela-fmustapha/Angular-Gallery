@@ -10,10 +10,17 @@ import { ImageService } from '../../services/image.service';
 })
 export class ImageListComponent implements OnInit {
   images: any[] = [];
+  selectedImage: any;
   constructor(private imageService: ImageService) { }
 
   ngOnInit() {
     this.images = this.imageService.getImages();
+    console.log(this.images, "<==images");
   }
 
+  onSelect(image) {
+    console.log(image, '<=Image');
+    this.selectedImage = image;
+    console.log("selectedImage", this.selectedImage);
+  }
 }

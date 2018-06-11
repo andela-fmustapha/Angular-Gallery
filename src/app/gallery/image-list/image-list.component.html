@@ -1,5 +1,6 @@
+<gallery-detail [selectedImage]= "selectedImage"></gallery-detail>
 <div class="container">
     <div class="row">
-      <gallery-image *ngFor="let image of images" [image]="image"></gallery-image>    
+      <gallery-image *ngFor="let image of images" [image]="image" (click)="onSelect(image)"></gallery-image>    
     </div>
   </div>
