@@ -4,17 +4,28 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SliderComponent } from './slider/slider.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ImageListComponent } from './gallery/image-list/image-list.component';
+import { ImageComponent } from './gallery/image-list/image/image.component';
+import { ImageDetailComponent } from './gallery/image-detail/image-detail.component';
+
+
+import { ImageService } from './services/image.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SliderComponent,
-    NavbarComponent
+    NavbarComponent,
+    GalleryComponent,
+    ImageListComponent,
+    ImageComponent,
+    ImageDetailComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
