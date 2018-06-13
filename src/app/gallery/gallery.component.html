@@ -1,1 +1,2 @@
-<gallery-image-list></gallery-image-list>
+<gallery-image-detail [selectedImage]="selectedImage"></gallery-image-detail>
+<gallery-image-list (selectedEvent)="selectImage($event)"></gallery-image-list>
