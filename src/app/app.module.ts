@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SliderComponent } from './slider/slider.component';
@@ -11,6 +12,17 @@ import { ImageDetailComponent } from './gallery/image-detail/image-detail.compon
 
 
 import { ImageService } from './services/image.service';
+import { GithubPageComponent } from './github-page/github-page.component';
+import { AboutComponent } from './about/about.component';
+
+const appRoutes: Routes = [
+  { path: '', redirectTo: '/gallery', pathMatch: 'full'},
+  { path: 'gallery', component: GalleryComponent },
+  { path: 'about', component: AboutComponent},
+  { path: 'github', 
+  resolve : { url :'https://github.com/andela-fmustapha/Angular-Gallery'},
+  component: GithubPageComponent}
+];
 
 @NgModule({
   declarations: [
@@ -20,10 +32,13 @@ import { ImageService } from './services/image.service';
     GalleryComponent,
     ImageListComponent,
     ImageComponent,
-    ImageDetailComponent
+    ImageDetailComponent,
+    GithubPageComponent,
+    AboutComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ImageService],
   bootstrap: [AppComponent]
