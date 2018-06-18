@@ -19,7 +19,6 @@ import { Image } from '../../../models/image';
   a:hover {
     cursor:pointer;
   }
-
   img:active {
     filter: grey;
     -webkit-filter: grayscale(1);

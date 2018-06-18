@@ -2,15 +2,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Image } from '../../models/image';
 
 import { ImageService } from '../../services/image.service';
-// import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'gallery-image-list',
   templateUrl: './image-list.component.html',
-  styles: [`a:visited {
-    filter: grey;
-    -webkit-filter: grayscale(1);
-  }`]
+  styles: [
+]
 })
 export class ImageListComponent implements OnInit {
   images: any[] = [];
@@ -25,8 +22,6 @@ export class ImageListComponent implements OnInit {
   }
 
   onSelect(image) {
-    console.log(image, "selected-image")
-    let selected = this.selectedEvent.emit(image);
-    console.log(selected, "selected Image");
+   this.selectedEvent.emit(image);
   }
 }
