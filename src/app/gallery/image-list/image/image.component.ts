@@ -16,7 +16,9 @@ import { Image } from '../../../models/image';
     -webkit-transform: (1.5);
     transform: scale(1.05);
   }
-
+  a:hover {
+    cursor:pointer;
+  }
   img:active {
     filter: grey;
     -webkit-filter: grayscale(1);
